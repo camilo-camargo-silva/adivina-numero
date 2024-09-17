@@ -1,0 +1,147 @@
+:root {
+  --main-color: #BB0FAF;
+  --font-color: #16FD5F;
+}
+
+* {
+  box-sizing: border-box;
+  color: var(--font-color);
+  font-family: 'Open sans';
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  height: 100vh;
+  background-image: radial-gradient(at 50% 100%, #505FCD, #191414);
+  background-repeat: no-repeat;
+}
+
+.title {
+  text-align: center;
+  text-transform: capitalize;
+  padding: 40px 10px;
+}
+
+.card {
+  width: min(80vw, 500px);
+  margin: 50px auto 10px;
+  font-size: 15px;
+  background-color: #2A2222;
+  box-shadow: 0 0 10px 2px #060A0C;
+}
+
+.robot {
+  float: left;
+  max-width: 25%;
+  margin: 5px 30px;
+  filter: drop-shadow(-5px 5px 5px var(--main-color));
+  transform: scale(1.5) translateY(-1em); 
+}
+
+.card-title {
+  text-align: center;
+  font-size: 2em;
+  padding: 0.25em .75em;
+}
+
+.card-list { 
+  padding: 0.75em 0;
+}
+
+.card-list-item::marker, p { 
+  color: #FD3E65;
+  font-weight: 700;
+}
+
+.card-list-item{
+  text-indent: 1em;
+  line-height: 3ex;
+}
+
+.game {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  gap: 3em 0;
+  color: #f0f4f0;
+  font-size: 15px;
+  width: min(80vw, 500px);
+  height: 40vh;
+  margin: 0 auto;
+  background-image: url(img/code.png);
+  background-size: contain;
+}
+
+.mensaje {
+  width: 100%;
+  color: var(--font-color);
+  text-align: center;
+}
+
+.mensaje:empty {
+  display: none;
+}
+
+.entrada{
+  width: 100%;
+  height: 3em;
+  padding: 0.85em;
+  text-align: center;
+  font-size: inherit;
+  color: #060A0C;
+  border: none;
+  background-color: #E8F7FFAA;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
+
+.game button {
+  width: 40%;
+  margin: 0 auto;
+  height: 3em;
+  font-size: inherit;
+  color: inherit;
+  background-color: var(--main-color);
+  padding: 10px 20px;
+  font-weight: 700;
+}
+
+.game button:disabled {
+  color: #16FD5F;
+  background-color: #475d6875;
+}
+
+.play {
+  width: 100%;
+  display: inline-block;
+  font-size: inherit;
+  color: inherit;
+}
+
+
+@media screen and (max-width: 600px){
+    body {
+      height: fit-content;
+    }
+    .card {
+      text-align: center;
+    }
+    .card-list {
+      text-align: left;
+      padding-left: 15%;
+    }
+    .robot {
+      float: none;
+    }
+}
+
+
+
+
+
+
